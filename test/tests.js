@@ -1,24 +1,24 @@
 const assert = require('chai').assert
-const getMovieNames = require('./index').getMovieNames
 const queryIMDB = require('./index').queryIMDB
+const getMovieNames = require('./index').getMovieNames
 const run = require('./index').run
 
 describe('MovieSearch CLI', function(){
-  describe('getMovieNames', function (){
-    it('', function(){
-      assert.equal();
+  describe('queryIMDB', function (){
+    it('search does does not equal an empty string ""', function(){
+      assert.notEqual(queryIMDB(search, cb), "");
     })
   })
 
   describe('queryIMDB', function(){
-    it('', function(){
-      assert.notEqual();
+    it('getMovieNames passes an HTML argument', function(){
+      assert.equal(getMovieNames(html), html);
     })
   })
 
   describe('run', function(){
-    it('', function(){
-      assert.typeOf();
+    it('console.log returns movieNames with a new line', function(){
+      assert.typeOf(run(), '\n');
     })
   })
 
