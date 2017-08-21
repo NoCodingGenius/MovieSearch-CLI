@@ -1,0 +1,26 @@
+{
+  "name": "moviesearch-cli",
+  "version": "1.0.0",
+  "description": "movie-search cli",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NoCodingGenius/MovieSearch-CLI.git"
+  },
+  "keywords": [
+    "http",
+    "practice"
+  ],
+  "author": "LaToya Williams",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/NoCodingGenius/MovieSearch-CLI/issues"
+  },
+  "homepage": "https://github.com/NoCodingGenius/MovieSearch-CLI#readme",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2"
+  }
+}
