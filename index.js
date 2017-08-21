@@ -1,8 +1,7 @@
 const http = require('http');
 const cheerio = require('cheerio');
-const search = process.argv.slice(2).join('+');
 
-function queryIMDB(search, cb) {
+const queryIMDB = function queryIMDB(search, cb) {
     http.get({
       host: 'www.imdb.com',
       path: `/find?ref_=nv_sr_fn&q=${search}&s=all`
@@ -18,7 +17,7 @@ function queryIMDB(search, cb) {
     })
 }
 
-function getMovieNames(html) {
+const getMovieNames = function getMovieNames(html) {
   const $ = cheerio.load(html)
   const movieNames = $('.findSection')
   .first()
@@ -28,7 +27,18 @@ function getMovieNames(html) {
   return movieNames
 }
 
-queryIMDB(search, function(err, movieNames){
-  if (err) throw err
-  console.log(movieNames.join('\n'));
-});
+const run = function run() {
+  const search = process.argv.slice(2).join('+');
+  queryIMDB(search, function(err, movieNames){
+    if (err) throw err
+    console.log(movieNames.join('\n'));
+  });
+}
+
+run()
+
+module.exports = {
+  queryIMDB,
+  getMovieNames,
+  run
+}

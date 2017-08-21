@@ -4,7 +4,7 @@
   "description": "movie-search cli",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "find ./test -name '*tests.js | xargs mocha -R spec Mocha || true"
   },
   "repository": {
     "type": "git",
@@ -22,5 +22,9 @@
   "homepage": "https://github.com/NoCodingGenius/MovieSearch-CLI#readme",
   "dependencies": {
     "cheerio": "^1.0.0-rc.2"
+  },
+  "devDependencies": {
+    "chia": "0.0.1",
+    "mocha": "^3.5.0"
   }
 }
