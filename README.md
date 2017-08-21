@@ -1,7 +1,3 @@
-# MovieSearch-CLI
-Movie Search CLI - Phase-2
-
-
 # Movie Search CLI
 
 ## Skills
