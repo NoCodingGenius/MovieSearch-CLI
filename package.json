@@ -4,7 +4,7 @@
   "description": "movie-search cli",
   "main": "index.js",
   "scripts": {
-    "test": "find ./test -name '*tests.js | xargs mocha -R spec Mocha || true"
+    "test": "Mocha || true"
   },
   "repository": {
     "type": "git",

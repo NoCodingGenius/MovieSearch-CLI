@@ -24,6 +24,7 @@ const getMovieNames = function getMovieNames(html) {
   .find('.result_text')
   .map((i, elm) => $(elm).text())
   .toArray()
+  console.log(movieNames);
   return movieNames
 }
 
