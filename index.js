@@ -4,7 +4,7 @@ const cheerio = require('cheerio');
 const queryIMDB = function queryIMDB(search, cb) {
     http.get({
       host: 'www.imdb.com',
-      path: `/find?ref_=nv_sr_fn&q=${search}&s=all`
+      path:  `/find?ref_=nv_sr_fn&q=${search}&s=all`
     }, function(res){
       var html = ''
       res.on('data', function(chunk){
@@ -24,7 +24,6 @@ const getMovieNames = function getMovieNames(html) {
   .find('.result_text')
   .map((i, elm) => $(elm).text())
   .toArray()
-  console.log(movieNames);
   return movieNames
 }
 
